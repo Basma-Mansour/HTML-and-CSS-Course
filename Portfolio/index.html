@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassy Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #00f0ff;
+      text-decoration: underline;
+    }
+
+    /* Glass effect section */
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 80px auto;
+      width: 80%;
+    }
+
+    /* Centered image with filter */
+    .center-image {
+      display: block;
+      margin: 20px auto;
+      width: 300px;
+      border-radius: 15px;
+      filter: brightness(90%) contrast(120%);
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    table, th, td {
+      border: 1px solid #333;
+    }
+
+    th, td {
+      padding: 12px;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    /* Text over image */
+    .image-text-container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .image-text-container img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .image-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    /* Two column layout */
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .column {
+      width: 48%;
+      height: 200px;
+      background-color: #fff;
+      color: #333;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    /* Paragraph hover effect */
+    p.hover-effect:hover {
+      background-color: #ddf;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    /* Image overlay fade */
+    .img-overlay-container {
+      position: relative;
+      width: 300px;
+      margin: 20px auto;
+    }
+
+    .img-overlay-container img {
+      width: 100%;
+      border-radius: 15px;
+      display: block;
+    }
+
+    .img-overlay-container .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.5s;
+      border-radius: 15px;
+    }
+
+    .img-overlay-container:hover .overlay {
+      opacity: 1;
+    }
+
+    /* Video section */
+    .video-section {
+      position: relative;
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+      margin: 30px 0;
+    }
+
+    .video-section video {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .video-overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 2em;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-weight: bold;
+      background-color: #222;
+      color: white;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#port">Portfolio</a>
+    <a href="#media">Media</a>
+  </div>
+
+  <!-- Glassy Main Section -->
+  <div class="glass">
+
+    <h1 id="about">Welcome to My Portfolio</h1>
+
+    <!-- Centered Image with filter and rounded edges -->
+    <img src="https://cdn.pixabay.com/photo/2016/12/17/20/05/building-1914309_1280.jpg" alt="Centered" class="center-image">
+
+    <!-- Table -->
+    <h2>Project Table</h2>
+    <table id="port">
+      <tr>
+        <th>Project</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Portfolio</td>
+        <td>Personal web showcase</td>
+      </tr>
+      <tr>
+        <td>Bootstrap</td>
+        <td>Web style showcase</td>
+      </tr>
+    </table>
+
+    <!-- Text over Image -->
+    <div class="image-text-container">
+      <img src="https://cdn.pixabay.com/photo/2019/08/27/07/33/skyscraper-4433572_1280.jpg" alt="Banner">
+      <div class="image-text">Creative Web Developer</div>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="columns">
+      <div class="column">Column One: Skills, tools, and experience.</div>
+      <div class="column">Column Two: Goals, values, and passions.</div>
+    </div>
+
+    <!-- Paragraph hover effect -->
+    <p class="hover-effect">Hover over this paragraph to see the effect!</p>
+
+    <!-- Image Overlay Fade -->
+    <div id="media" class="img-overlay-container">
+      <img src="https://cdn.pixabay.com/photo/2023/04/24/10/16/architecture-7947724_1280.jpg" alt="Overlay Image">
+      <div class="overlay"></div>
+    </div>
+
+    <!-- Video with autoplay, mute, loop -->
+    <div class="video-section">
+      <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2021/10/12/91744-636709154_tiny.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay-text">Inspiration in Motion</div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 My Portfolio | Designed with ❤️
+  </footer>
+
+</body>
+</html>
+
